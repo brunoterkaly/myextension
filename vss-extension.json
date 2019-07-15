@@ -1,0 +1,84 @@
+{
+    "manifestVersion": 1,
+    "id": "my-databricks",
+    "name": "DevOps for Azure Databricks",
+    "version": "0.1.12",
+    "publisher": "AutoSpark",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "description": "A set of Pipeline tasks to help add DevOps practices to a Databricks development cycle.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://bterkaly0365@dev.azure.com/bterkaly0365/DataOps/_git/DataOps"
+    },
+    "files": [
+        {
+            "path": "tasks/DeployNotebooksTask"
+        },
+        {
+            "path": "tasks/ConfigureDatabricks"
+        },
+        {
+            "path": "tasks/ExecuteNotebook"
+        },
+        {
+            "path": "tasks/WaitExecution"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "azdo-databricks-deploynotebooks",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/DeployNotebooksTask"
+            }
+        },
+        {
+            "id": "azdo-databricks-configuredatabricks",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/ConfigureDatabricks"
+            }
+        },
+        {
+            "id": "azdo-databricks-executenotebook",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/ExecuteNotebook"
+            }
+        },
+        {
+            "id": "azdo-databricks-waitexecution",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/WaitExecution"
+            }
+        }
+    ]
+}
